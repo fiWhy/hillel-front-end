@@ -1,0 +1,6 @@
+$icons-font-path: "../node_modules/semantic-ui-scss/icons/";
+$flags-image-path: "../node_modules/semantic-ui-scss/images/";
+
+@import "./scss/variables";
+@import "~semantic-ui-scss/semantic-ui";
+@import "./scss/base";

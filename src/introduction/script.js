@@ -1,0 +1,1 @@
+window['header'] = require('../partials/header.ejs');
