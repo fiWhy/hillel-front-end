@@ -1,7 +1,66 @@
-.hat {
-    background-color: $primary-color;
-}
+.presentation-table {
 
-.octopus {
-    background-image: url('../images/octopus.png');
+    .table-topic,
+    .table-timeline {
+        color: $font-color;
+
+        h3 {
+            &.header {
+                text-transform: uppercase;
+                text-indent: .3rem;
+                line-height: 30px;
+            }
+        }
+    }
+
+    .table-topic {
+        .task {
+            .circles {
+                i {
+                    &:before {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .howto {}
+    }
+
+    .circles {
+        @include circles($primary-color--hover, 1.5rem);
+        top: 0.25rem;
+        margin: 0 0.5rem;
+    }
+
+    .theme {
+        .topic {
+            .header {
+                color: $grey;
+            }
+        }
+
+        .content {
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    padding: 0 1.5rem;
+                }
+            }
+
+            .task {
+                ul li {
+                    @include empty-circle($primary-color, $body-bg-color, 8px);
+                }
+            }
+
+            .howto {
+                ul li {
+                    @include empty-circle($primary-color--hover, $body-bg-color, 8px);
+                }
+            }
+        }
+    }
 }
