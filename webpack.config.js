@@ -1,11 +1,13 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const _ = require('lodash');
 
 module.exports = (env) => {
-    return {
+    const config = {
         devtool: 'eval-cheap-module-source-map',
-        mode: env ? env.NODE_ENV : 'production',
+        mode: env.production ? 'production' : 'development',
         entry: {
             app: path.resolve(__dirname, './src/index.js'),
             styles: path.resolve(__dirname, './src/styles.scss'),
@@ -46,6 +48,8 @@ module.exports = (env) => {
         plugins: [
             new HtmlWebpackPlugin({
                 inject: 'head',
+                minify: true,
+                inlineSource: '.(js|css)$',
                 template: path.resolve(__dirname, './src/introduction/tpl.ejs'),
                 filename: 'introduction.html',
                 chunks: [
@@ -56,4 +60,11 @@ module.exports = (env) => {
             })
         ]
     }
+
+    if (env.production) {
+        config.devtool = 'false';
+        config.plugins.push(new HtmlWebpackInlineSourcePlugin());
+    }
+
+    return config;
 }

@@ -1,11 +1,48 @@
-.hat {
+.hat,
+.page-footer {
     &.grid.container {
         background-color: $primary-color;
-        color: $default-color;
+        color: $body-bg-color;
+    }
+}
+
+.ui {
+    &.segment {
+        &.with-code {
+            background-color: $code-background;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.underlined {
+        &:after {
+            content: '';
+            background-color: $primary-color;
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 100%;
+            height: 0.3rem;
+        }
+
+        &.error {
+            &:after {
+                background-color: $red;
+            }
+        }
     }
 }
 
 .presentation-table {
+
+    $li-space: rem-to-actual-number(0.5rem, $small-circle-width / 2);
+    $li-with-border-space: $li-space+circle-border-size($li-space) * 2.5 + px;
 
     .table-topic,
     .table-timeline {
@@ -44,6 +81,8 @@
         .topic {
             .header {
                 color: $grey;
+                display: inline-block;
+                position: relative;
             }
         }
 
@@ -59,13 +98,21 @@
 
             .task {
                 ul li {
-                    @include empty-circle($primary-color, $body-bg-color, 8px);
+                    @include empty-circle($primary-color, $body-bg-color, $small-circle-width);
+
+                    &:before {
+                        top: $li-with-border-space;
+                    }
                 }
             }
 
             .howto {
                 ul li {
-                    @include empty-circle($primary-color--hover, $body-bg-color, 8px);
+                    @include empty-circle($primary-color--hover, $body-bg-color, $small-circle-width);
+
+                    &:before {
+                        top: $li-with-border-space;
+                    }
                 }
             }
         }

@@ -1,8 +1,18 @@
 $icons-font-path: "../node_modules/semantic-ui-scss/icons/";
 $flags-image-path: "../node_modules/semantic-ui-scss/images/";
 $font-name: "Open Sans";
+$code-background: #f8f8f8;
 
 @import "./scss/variables";
-@import "~semantic-ui-scss/semantic-ui";
+@import "../node_modules/semantic-ui-scss/scss/variables/global";
+@import "../node_modules/semantic-ui-scss/scss/globals/reset";
+@import "../node_modules/semantic-ui-scss/scss/globals/site";
+@import "../node_modules/semantic-ui-scss/scss/collections/grid";
+@import "../node_modules/semantic-ui-scss/scss/elements/container";
+@import "../node_modules/semantic-ui-scss/scss/elements/header";
+@import "../node_modules/semantic-ui-scss/scss/elements/label";
+@import "../node_modules/semantic-ui-scss/scss/elements/list";
+@import "../node_modules/semantic-ui-scss/scss/elements/segment";
+@import "../node_modules/semantic-ui-scss/scss/elements/divider";
 @import "./scss/mixins";
 @import "./scss/base";

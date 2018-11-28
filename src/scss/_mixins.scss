@@ -1,10 +1,14 @@
+@function circle-border-size($actual) {
+    @return $actual / 5;
+}
+
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
+    @if type-of($number)=='number'and not unitless($number) {
+        @return $number / ($number * 0 + 1);
     }
-  
+
     @return $number;
-  }
+}
 
 @function semantic-rem-to-number($units) {
     @if unit($units)=='rem' {
@@ -16,6 +20,10 @@
     }
 }
 
+@function rem-to-actual-number($rem, $actual) {
+    @return semantic-rem-to-number($rem) - semantic-rem-to-number($actual);
+}
+
 @mixin empty-circle($color-out, $color-inner, $outer-size: 15px) {
     $inner-size: $outer-size/2;
     $inner-margin: ($outer-size - $inner-size) / 2;
@@ -24,13 +32,12 @@
 
     &:before {
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
         position: absolute;
         content: ' ';
         display: inline-block;
         border-radius: 50%;
-        border: $outer-size / 5 solid $color-out;
+        border: circle-border-size($outer-size) solid $color-out;
         z-index: 1;
         width: $outer-size;
         height: $outer-size;
