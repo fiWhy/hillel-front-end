@@ -13,8 +13,8 @@
         title: '#1. Introduction'
     }) %>
     <div class="ui grid container presentation-table">
-        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column">
-            <div class="ui grid">
+        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column presentation-content">
+            <!-- <div class="ui grid">
                 <div class="column">
                     <div class="ui piled segment">
                         <h3 class="header">Articles</h3>
@@ -55,20 +55,21 @@
                     </div>
                 </div>
             </div>
-            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div> -->
             <div class="row">
                 <div class="column">
                     <div class="ui two column stackable grid table-topic">
                         <div class="column task">
                             <h3 class="ui header">
                                 Topic
-                                <%= require('../partials/circles.ejs')() %>
+                                <!-- <%= require('../partials/circles.ejs')() %> -->
                                 Goals
                             </h3>
                         </div>
                         <div class="column howto">
                             <h3 class="ui header">
-                                <%= require('../partials/circles.ejs')() %> Information</h3>
+                                <!-- <%= require('../partials/circles.ejs')() %>  -->
+                                Information</h3>
                         </div>
                     </div>
                     <div class="ui divider"></div>
@@ -79,7 +80,7 @@
                     <header class="ui one column grid topic">
                         <div class="column">
                             <h2 class="ui header underlined">
-                                <a href="#technologies">Technologies</a>
+                                <a class="hash" href="#technologies">Technologies</a>
                             </h2>
                         </div>
                     </header>
@@ -94,8 +95,8 @@
                         </div>
                         <div class="column howto">
                             <ul>
-                                <li>
-                                    <b>Web Game Development lib examples</b>
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Web Game Development lib examples</b>
                                     <ul>
                                         <li><a href="http://www.cocos2d-x.org/">Cocos2D</a></li>
                                         <li><a href="https://threejs.org/">three.js</a></li>
@@ -103,21 +104,21 @@
                                         <li><a href="https://phaser.io/">Phaser</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <b>Desktop Game Development</b>
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Desktop Game Development</b>
                                     <ul>
                                         <li><a href="https://unity3d.com">Unity</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <b>Desktop Development</b>
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Desktop Development</b>
                                     <ul>
                                         <li><a href="https://electronjs.org/">Electron</a></li>
                                         <li><a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <b>Mobile Applications Development</b>
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Mobile Applications Development</b>
                                     <ul>
                                         <li><a href="https://ionicframework.com/">Ionic</a></li>
                                         <li><a href="https://www.nativescript.org/">NativeScript</a></li>
@@ -125,8 +126,8 @@
                                         <li><a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <b>Web Server Development</b>
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Web Server Development</b>
                                     <ul>
                                         <li><a href="https://expressjs.com/">Express</a></li>
                                         <li><a href="https://koajs.com/">koa</a></li>
@@ -135,8 +136,8 @@
                                         <li><a href="http://nodeframework.com/">Others...</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <b>Web Front-End Development</b>
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Web Front-End Development</b>
                                     <ul>
                                         <li><a href="https://angular.io/">Angular</a></li>
                                         <li><a href="https://vuejs.org/">Vue</a></li>
@@ -155,7 +156,7 @@
                     <header class="ui one column grid topic">
                         <div class="column">
                             <h2 class="ui header underlined">
-                                <a href="#history">History</a>
+                                <a class="hash" href="#history">History</a>
                             </h2>
                         </div>
                     </header>
@@ -223,7 +224,7 @@
                     <header class="ui one column grid topic">
                         <div class="column">
                             <h2 class="ui header underlined">
-                                <a href="#project">Project</a>
+                                <a class="hash" href="#project">Project</a>
                             </h2>
                         </div>
                     </header>
@@ -271,7 +272,7 @@
                     <header class="ui one column grid topic">
                         <div class="column">
                             <h2 class="ui header underlined">
-                                <a href="#development">Development</a>
+                                <a class="hash" href="#development">Development</a>
                             </h2>
                         </div>
                     </header>
@@ -308,7 +309,7 @@
                     <header class="ui one column grid topic">
                         <div class="column">
                             <h2 class="ui header underlined">
-                                <a href="#hello-world">Hello world</a>
+                                <a class="hash" href="#hello-world">Hello world</a>
                             </h2>
                         </div>
                     </header>
@@ -366,7 +367,7 @@
                     <header class="ui one column grid topic data">
                         <div class="column">
                             <h2 class="ui header underlined">
-                                <a href="#homework">Homework</a>
+                                <a class="hash" href="#homework">Homework</a>
                             </h2>
                         </div>
                     </header>
@@ -395,12 +396,12 @@
         <div class="two wide tablet computer only column">
             <div class="sticked">
                 <ul>
-                    <li><a href="#technologies">Technologies</a></li>
-                    <li><a href="#history">History</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#development">Development</a></li>
-                    <li><a href="#hello-world">Hello world</a></li>
-                    <li><a href="#homework">Homework</a></li>
+                    <li><a class="hash" href="#technologies">Technologies</a></li>
+                    <li><a class="hash" href="#history">History</a></li>
+                    <li><a class="hash" href="#project">Project</a></li>
+                    <li><a class="hash" href="#development">Development</a></li>
+                    <li><a class="hash" href="#hello-world">Hello world</a></li>
+                    <li><a class="hash" href="#homework">Homework</a></li>
                 </ul>
             </div>
         </div>

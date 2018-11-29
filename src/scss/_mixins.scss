@@ -107,3 +107,51 @@
         }
     }
 }
+
+@mixin arrow($color: #000, $size: 0.2rem) {
+    position: relative;
+    padding-left: 1rem;
+
+    &:before {
+        position: absolute;
+        border: $size solid transparent;
+        border-top: $size solid $color;
+        border-right: $size solid $color;
+        display: inline-block;
+        left: 0;
+        top: 0.5rem;
+        content: '';
+        z-index: 1;
+    }
+
+    &.right {
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+
+    &.left {
+        &:before {
+            transform: rotate(-135deg);
+        }
+    }
+
+    &.up {
+        &:before {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &.down {
+        &:before {
+            transform: rotate(135deg);
+        }
+    }
+}
+
+@mixin hash($color: #000) {
+    &:before {
+        content: '#';
+        padding-right: 0.5rem;
+    }
+}

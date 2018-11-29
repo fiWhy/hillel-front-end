@@ -2,6 +2,14 @@ html {
     scroll-behavior: smooth
 }
 
+.hash {
+    @include hash($primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
 .hat,
 .page-footer {
     &.grid.container {
@@ -10,8 +18,26 @@ html {
     }
 }
 
+.drop {
+    @include arrow($primary-color);
+
+    &>b {
+        cursor: pointer;
+    }
+
+    &>ul {
+        display: none;
+    }
+
+    &.opened>ul {
+        display: block;
+    }
+}
+
+
 h2 a {
     position: relative;
+
     &:before {
         content: '#';
         padding-right: 0.5rem;
@@ -31,27 +57,6 @@ h2 a {
     }
 }
 
-ul {
-
-    $li-space: rem-to-actual-number(0.5rem, $small-circle-width / 2);
-    $li-with-border-space: $li-space+circle-border-size($li-space) * 2.5 + px;
-
-    list-style: none;
-    padding: 0;
-
-    li {
-        padding: 0 1.5rem;
-
-
-        @include empty-circle($primary-color, $body-bg-color, $small-circle-width);
-
-        &:before {
-            top: $li-with-border-space;
-        }
-    }
-
-
-}
 
 h1,
 h2,
@@ -79,6 +84,27 @@ h6 {
 }
 
 .presentation-table {
+    .presentation-content {
+        ul {
+
+            $li-space: rem-to-actual-number(0.5rem, $small-circle-width / 2);
+            $li-with-border-space: $li-space+circle-border-size($li-space) * 2.5 + px;
+
+            list-style: none;
+            padding: 0;
+
+            li:not(.arrow) {
+                padding: 0 1.5rem;
+
+
+                @include empty-circle($primary-color, $body-bg-color, $small-circle-width);
+
+                &:before {
+                    top: $li-with-border-space;
+                }
+            }
+        }
+    }
 
     .table-topic,
     .table-timeline {

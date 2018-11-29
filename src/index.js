@@ -23,10 +23,21 @@
          }
      });
 
+
      toggleSticky(sticked);
 
      window.onscroll = () => {
          toggleSticky(sticked);
      }
+
+     const openable = document.getElementsByClassName('collapsable');
+
+     Array.from(openable).forEach(el => {
+         el.addEventListener('click', () => {
+             el.parentElement.classList.toggle('opened');
+             el.parentElement.classList.toggle('right');
+             el.parentElement.classList.toggle('down');
+         })
+     })
 
  }
