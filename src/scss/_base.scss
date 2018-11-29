@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth
+}
+
 .hat,
 .page-footer {
     &.grid.container {
@@ -6,12 +10,47 @@
     }
 }
 
+h2 a {
+    position: relative;
+    &:before {
+        content: '#';
+        padding-right: 0.5rem;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
 .ui {
     &.segment {
         &.with-code {
             background-color: $code-background;
         }
     }
+}
+
+ul {
+
+    $li-space: rem-to-actual-number(0.5rem, $small-circle-width / 2);
+    $li-with-border-space: $li-space+circle-border-size($li-space) * 2.5 + px;
+
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 0 1.5rem;
+
+
+        @include empty-circle($primary-color, $body-bg-color, $small-circle-width);
+
+        &:before {
+            top: $li-with-border-space;
+        }
+    }
+
+
 }
 
 h1,
@@ -40,9 +79,6 @@ h6 {
 }
 
 .presentation-table {
-
-    $li-space: rem-to-actual-number(0.5rem, $small-circle-width / 2);
-    $li-with-border-space: $li-space+circle-border-size($li-space) * 2.5 + px;
 
     .table-topic,
     .table-timeline {
@@ -83,37 +119,6 @@ h6 {
                 color: $grey;
                 display: inline-block;
                 position: relative;
-            }
-        }
-
-        .data {
-            ul {
-                list-style: none;
-                padding: 0;
-
-                li {
-                    padding: 0 1.5rem;
-                }
-            }
-
-            .task {
-                ul li {
-                    @include empty-circle($primary-color, $body-bg-color, $small-circle-width);
-
-                    &:before {
-                        top: $li-with-border-space;
-                    }
-                }
-            }
-
-            .howto {
-                ul li {
-                    @include empty-circle($primary-color--hover, $body-bg-color, $small-circle-width);
-
-                    &:before {
-                        top: $li-with-border-space;
-                    }
-                }
             }
         }
     }

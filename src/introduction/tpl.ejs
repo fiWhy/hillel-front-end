@@ -13,390 +13,395 @@
         title: '#1. Introduction'
     }) %>
     <div class="ui grid container presentation-table">
-        <div class="row">
-            <div class="column">
-                <div class="ui piled segment">
-                    <h3 class="header">Articles</h3>
-                    <div class="ui list">
-                        <div class="item">
-                            <div class="content">
-                                <div class="header">
-                                    <a href="https://habr.com/post/114483/">Используем console на
-                                        полную</a>
+        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column">
+            <div class="ui grid">
+                <div class="column">
+                    <div class="ui piled segment">
+                        <h3 class="header">Articles</h3>
+                        <div class="ui list">
+                            <div class="item">
+                                <div class="content">
+                                    <div class="header">
+                                        <a href="https://habr.com/post/114483/">Используем console на
+                                            полную</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="content">
-                                <div class="header">
-                                    <a href="https://habrahabr.ru/company/livetyping/blog/324196/">Краткая история
-                                        JavaScript. Часть 1</a>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="header">
+                                        <a href="https://habrahabr.ru/company/livetyping/blog/324196/">Краткая история
+                                            JavaScript. Часть 1</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="content">
-                                <div class="header">
-                                    <a href="https://habrahabr.ru/company/livetyping/blog/324506/">Краткая история
-                                        JavaScript. Часть 2</a>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="header">
+                                        <a href="https://habrahabr.ru/company/livetyping/blog/324506/">Краткая история
+                                            JavaScript. Часть 2</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="content">
-                                <div class="header">
-                                    <a href="https://habrahabr.ru/company/livetyping/blog/324908/">Краткая история
-                                        JavaScript. Часть 3</a>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="header">
+                                        <a href="https://habrahabr.ru/company/livetyping/blog/324908/">Краткая история
+                                            JavaScript. Часть 3</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="column">
-                <div class="ui three column stackable grid table-topic">
-                    <div class="column task">
-                        <h3 class="ui header">
-                            Topic
-                            <%= require('../partials/circles.ejs')() %>
-                            Goals
-                        </h3>
+            <div class="ui hidden divider"></div>
+            <div class="row">
+                <div class="column">
+                    <div class="ui two column stackable grid table-topic">
+                        <div class="column task">
+                            <h3 class="ui header">
+                                Topic
+                                <%= require('../partials/circles.ejs')() %>
+                                Goals
+                            </h3>
+                        </div>
+                        <div class="column howto">
+                            <h3 class="ui header">
+                                <%= require('../partials/circles.ejs')() %> Information</h3>
+                        </div>
                     </div>
-                    <div class="column howto">
-                        <h3 class="ui header">
-                            <%= require('../partials/circles.ejs')() %> Information</h3>
-                    </div>
-                    <div class="column">
-                        <h3 class="ui header">
-                            <%= require('../partials/circles.ejs')() %> Interactive task</h3>
-                    </div>
+                    <div class="ui divider"></div>
                 </div>
-                <div class="ui divider"></div>
             </div>
-        </div>
-        <div class="row" id="technologies">
-            <div class="column theme">
-                <header class="ui one column grid topic">
-                    <div class="column">
-                        <h2 class="ui header underlined">
-                            <a href="#technologies">Technologies</a>
-                        </h2>
-                    </div>
-                </header>
-                <section class="ui divider"></section>
-                <section class="ui three column stackable grid data">
-                    <div class="column task">
-                        <ul>
-                            <li>
-                                What is waiting for Front-End Developer?
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column howto">
-                        <ul>
-                            <li>
-                                <b>Web Game Development lib examples</b>
-                                <ul>
-                                    <li><a href="http://www.cocos2d-x.org/">Cocos2D</a></li>
-                                    <li><a href="https://threejs.org/">three.js</a></li>
-                                    <li><a href="http://www.pixijs.com/">PixiJS</a></li>
-                                    <li><a href="https://phaser.io/">Phaser</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <b>Desktop Game Development</b>
-                                <ul>
-                                    <li><a href="https://unity3d.com">Unity</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <b>Desktop Development</b>
-                                <ul>
-                                    <li><a href="https://electronjs.org/">Electron</a></li>
-                                    <li><a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <b>Mobile Applications Development</b>
-                                <ul>
-                                    <li><a href="https://ionicframework.com/">Ionic</a></li>
-                                    <li><a href="https://www.nativescript.org/">NativeScript</a></li>
-                                    <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
-                                    <li><a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <b>Web Server Development</b>
-                                <ul>
-                                    <li><a href="https://expressjs.com/">Express</a></li>
-                                    <li><a href="https://koajs.com/">koa</a></li>
-                                    <li><a href="https://www.meteor.com/">Meteor</a></li>
-                                    <li><a href="https://hapijs.com">hapi</a></li>
-                                    <li><a href="http://nodeframework.com/">Others...</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <b>Web Front-End Development</b>
-                                <ul>
-                                    <li><a href="https://angular.io/">Angular</a></li>
-                                    <li><a href="https://vuejs.org/">Vue</a></li>
-                                    <li><a href="https://reactjs.org/">React</a></li>
-                                    <li><a href="https://www.polymer-project.org/">Polymer</a></li>
-                                    <li><a href="https://www.emberjs.com/">Ember</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column"></div>
-                </section>
+            <div class="row" id="technologies">
+                <div class="column theme">
+                    <header class="ui one column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a href="#technologies">Technologies</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What is waiting for Front-End Developer?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li>
+                                    <b>Web Game Development lib examples</b>
+                                    <ul>
+                                        <li><a href="http://www.cocos2d-x.org/">Cocos2D</a></li>
+                                        <li><a href="https://threejs.org/">three.js</a></li>
+                                        <li><a href="http://www.pixijs.com/">PixiJS</a></li>
+                                        <li><a href="https://phaser.io/">Phaser</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Desktop Game Development</b>
+                                    <ul>
+                                        <li><a href="https://unity3d.com">Unity</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Desktop Development</b>
+                                    <ul>
+                                        <li><a href="https://electronjs.org/">Electron</a></li>
+                                        <li><a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Mobile Applications Development</b>
+                                    <ul>
+                                        <li><a href="https://ionicframework.com/">Ionic</a></li>
+                                        <li><a href="https://www.nativescript.org/">NativeScript</a></li>
+                                        <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+                                        <li><a href="https://developers.google.com/web/progressive-web-apps/">PWA</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Web Server Development</b>
+                                    <ul>
+                                        <li><a href="https://expressjs.com/">Express</a></li>
+                                        <li><a href="https://koajs.com/">koa</a></li>
+                                        <li><a href="https://www.meteor.com/">Meteor</a></li>
+                                        <li><a href="https://hapijs.com">hapi</a></li>
+                                        <li><a href="http://nodeframework.com/">Others...</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Web Front-End Development</b>
+                                    <ul>
+                                        <li><a href="https://angular.io/">Angular</a></li>
+                                        <li><a href="https://vuejs.org/">Vue</a></li>
+                                        <li><a href="https://reactjs.org/">React</a></li>
+                                        <li><a href="https://www.polymer-project.org/">Polymer</a></li>
+                                        <li><a href="https://www.emberjs.com/">Ember</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
-        <div class="row" id="history">
-            <div class="column theme">
-                <header class="ui one column grid topic">
-                    <div class="column">
-                        <h2 class="ui header underlined">
-                            <a href="#history">History</a>
-                        </h2>
-                    </div>
-                </header>
-                <section class="ui divider"></section>
-                <section class="ui three column stackable grid data">
-                    <div class="column task">
-                        <ul>
-                            <li>
-                                History hints
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column howto">
-                        <ul>
-                            <li>Netscape</li>
-                            <li>Mocha/LiveScript/JavaScript Integration 1995</li>
-                            <li>Microsoft JScript 1996</li>
-                            <li>Standard. ECMA-262 1996 born</li>
-                            <li>ECMAScript 2 1998</li>
-                            <li>ECMAScript 3 1999</li>
-                            <li>XMLHttpRequest</li>
-                            <li>Years of the great downtime</li>
-                            <li>ECMAScript 3.1 ( 5 ) 2009</li>
-                            <li>ECMAScript 5.1 2011</li>
-                            <li>ECMAScript 6 2015</li>
-                        </ul>
-                        <div class="ui piled segment">
-                            <h3 class="header">Articles</h3>
-                            <div class="ui list">
-                                <div class="item">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="https://habrahabr.ru/company/livetyping/blog/324196/">Краткая
-                                                история
-                                                JavaScript. Часть 1</a>
+            <div class="row" id="history">
+                <div class="column theme">
+                    <header class="ui one column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a href="#history">History</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    History hints
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li>Netscape</li>
+                                <li>Mocha/LiveScript/JavaScript Integration 1995</li>
+                                <li>Microsoft JScript 1996</li>
+                                <li>Standard. ECMA-262 1996 born</li>
+                                <li>ECMAScript 2 1998</li>
+                                <li>ECMAScript 3 1999</li>
+                                <li>XMLHttpRequest</li>
+                                <li>Years of the great downtime</li>
+                                <li>ECMAScript 3.1 ( 5 ) 2009</li>
+                                <li>ECMAScript 5.1 2011</li>
+                                <li>ECMAScript 6 2015</li>
+                            </ul>
+                            <div class="ui piled segment">
+                                <h3 class="header">Articles</h3>
+                                <div class="ui list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">
+                                                <a href="https://habrahabr.ru/company/livetyping/blog/324196/">Краткая
+                                                    история
+                                                    JavaScript. Часть 1</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="https://habrahabr.ru/company/livetyping/blog/324506/">Краткая
-                                                история
-                                                JavaScript. Часть 2</a>
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">
+                                                <a href="https://habrahabr.ru/company/livetyping/blog/324506/">Краткая
+                                                    история
+                                                    JavaScript. Часть 2</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="https://habrahabr.ru/company/livetyping/blog/324908/">Краткая
-                                                история
-                                                JavaScript. Часть 3</a>
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">
+                                                <a href="https://habrahabr.ru/company/livetyping/blog/324908/">Краткая
+                                                    история
+                                                    JavaScript. Часть 3</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column"></div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
-        <div class="row" id="project">
-            <div class="column theme">
-                <header class="ui one column grid topic">
-                    <div class="column">
-                        <h2 class="ui header underlined">
-                            <a href="#project">Project</a>
-                        </h2>
-                    </div>
-                </header>
-                <section class="ui divider"></section>
-                <section class="ui three column stackable grid data">
-                    <div class="column task">
-                        <ul>
-                            <li>
-                                Evolution of project
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column howto">
-                        <ul>
-                            <li>Mockup</li>
-                            <li>Design</li>
-                            <li>HTML</li>
-                            <li>Front-End</li>
-                            <li>Back-End</li>
-                        </ul>
-                    </div>
-                    <div class="column"></div>
-                </section>
-                <section class="ui three column stackable grid data">
-                    <div class="column task">
-                        <ul>
-                            <li>
-                                Evolution of project
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column howto">
-                        <ul>
-                            <li>Mockup</li>
-                            <li>Design</li>
-                            <li>HTML</li>
-                            <li>Front-End</li>
-                            <li>Back-End</li>
-                        </ul>
-                    </div>
-                    <div class="column"></div>
-                </section>
+            <div class="row" id="project">
+                <div class="column theme">
+                    <header class="ui one column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a href="#project">Project</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    Evolution of project
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li>Mockup</li>
+                                <li>Design</li>
+                                <li>HTML</li>
+                                <li>Front-End</li>
+                                <li>Back-End</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    Evolution of project
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li>Mockup</li>
+                                <li>Design</li>
+                                <li>HTML</li>
+                                <li>Front-End</li>
+                                <li>Back-End</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
-        <div class="row" id="development">
-            <div class="column theme">
-                <header class="ui one column grid topic">
-                    <div class="column">
-                        <h2 class="ui header underlined">
-                            <a href="development">Development</a>
-                        </h2>
-                    </div>
-                </header>
-                <section class="ui divider"></section>
-                <section class="ui three column stackable grid data">
-                    <div class="column task">
-                        <ul>
-                            <li>
-                                A Good Front-End Developer
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column howto">
-                        <ul>
-                            <li>
-                                Trying to keep his code clean
-                                <ul>
-                                    <li>Right name for structures</li>
-                                    <li>DRY - <b>Don't</b> repeat yourself</li>
-                                    <li><b>Don't</b> reinvent the wheel</li>
-                                </ul>
-                            </li>
-                            <li>Always think about people, who will maintain his code</li>
-                            <li>Weights pros and cons before technology implementation</li>
-                            <li>Uses stable version of technologies</li>
-                            <li>Uses general and special architecture patterns</li>
-                        </ul>
-                    </div>
-                    <div class="column"></div>
-                </section>
+            <div class="row" id="development">
+                <div class="column theme">
+                    <header class="ui one column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a href="#development">Development</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    A Good Front-End Developer
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li>
+                                    Trying to keep his code clean
+                                    <ul>
+                                        <li>Right name for structures</li>
+                                        <li>DRY - <b>Don't</b> repeat yourself</li>
+                                        <li><b>Don't</b> reinvent the wheel</li>
+                                    </ul>
+                                </li>
+                                <li>Always think about people, who will maintain his code</li>
+                                <li>Weights pros and cons before technology implementation</li>
+                                <li>Uses stable version of technologies</li>
+                                <li>Uses general and special architecture patterns</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
-        <div class="row" id="hello-world">
-            <div class="column theme">
-                <header class="ui one column grid topic">
-                    <div class="column">
-                        <h2 class="ui header underlined">
-                            <a href="hello-world">Hello world</a>
-                        </h2>
-                    </div>
-                </header>
-                <section class="ui divider"></section>
-                <section class="ui three column stackable grid data">
-                    <div class="column task">
-                        <ul>
-                            <li>
-                                Write our first program
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column howto">
-                        <div class="code-section">
-                            <h3>
-                                First script
-                            </h3>
-                            <div class="ui segment with-code">
-                                <div class="ui top right attached label">Code</div>
-                                <pre>
-                                    <code class="javascript">console.log("Hello world!");</code>
-                                </pre>
+            <div class="row" id="hello-world">
+                <div class="column theme">
+                    <header class="ui one column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a href="#hello-world">Hello world</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    Write our first program
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="code-section">
+                                <h3>
+                                    First script
+                                </h3>
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                        <code class="javascript">console.log("Hello world!");</code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="code-section">
+                                <h3>
+                                    Minimal html configuration
+                                </h3>
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">HTML</div>
+                                    <pre>
+                                        <code class="html">
+                                            <!DOCTYPE html>
+                                            <html lang="en">
+                                            <head>
+                                                <meta charset="UTF-8">
+                                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                                                <title>Document</title>
+                                            </head>
+                                            <body>
+                                                
+                                            </body>
+                                            </html>
+                                        </code>
+                                    </pre>
+                                </div>
                             </div>
                         </div>
-                        <div class="code-section">
-                            <h3>
-                                Minimal html configuration
-                            </h3>
-                            <div class="ui segment with-code">
-                                <div class="ui top right attached label">HTML</div>
-                                <pre>
-                                    <code class="html">
-                                        <!DOCTYPE html>
-                                        <html lang="en">
-                                        <head>
-                                            <meta charset="UTF-8">
-                                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                                            <title>Document</title>
-                                        </head>
-                                        <body>
-                                            
-                                        </body>
-                                        </html>
-                                    </code>
-                                </pre>
+                    </section>
+                </div>
+            </div>
+            <div class="row" id="homework">
+                <div class="column theme">
+                    <header class="ui one column grid topic data">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a href="#homework">Homework</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui one column stackable grid">
+                        <div class="column table-timeline">
+                            <div class="column ui blue segment">
+                                <p>
+                                    Obtain information on code redactor
+                                </p>
+                            </div>
+                            <div class="column ui red segment">
+                                <p>
+                                    <b>Obtain information on console methods.</b>
+                                </p>
+                                <p>
+                                    Write five your own variants of console usage with variables and without them.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="column"></div>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
-        <div class="row" id="homework">
-            <div class="column theme">
-                <header class="ui one column grid topic data">
-                    <div class="column">
-                        <h2 class="ui header underlined">
-                            <a href="homework">Homework</a>
-                        </h2>
-                    </div>
-                </header>
-                <section class="ui divider"></section>
-                <section class="ui one column stackable grid">
-                    <div class="column table-timeline">
-                        <div class="column ui blue segment">
-                            <p>
-                                Obtain information on code redactor
-                            </p>
-                        </div>
-                        <div class="column ui red segment">
-                            <p>
-                                <b>Obtain information on console methods.</b>
-                            </p>
-                            <p>
-                                Write five your own variants of console usage with variables and without them.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+
+        <div class="two wide tablet computer only column">
+            <div class="sticked">
+                <ul>
+                    <li><a href="#technologies">Technologies</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#development">Development</a></li>
+                    <li><a href="#hello-world">Hello world</a></li>
+                    <li><a href="#homework">Homework</a></li>
+                </ul>
             </div>
         </div>
     </div>
