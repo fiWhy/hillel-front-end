@@ -11,7 +11,8 @@ module.exports = (env) => {
         entry: {
             app: path.resolve(__dirname, './src/index.js'),
             styles: path.resolve(__dirname, './src/styles.scss'),
-            introduction: path.resolve(__dirname, './src/introduction/script.js')
+            introduction: path.resolve(__dirname, './src/pages/introduction/script.js'),
+            dashboard: path.resolve(__dirname, './src/pages/dashboard/script.js')
         },
         output: {
             path: path.resolve(__dirname, './dist')
@@ -50,12 +51,24 @@ module.exports = (env) => {
                 inject: 'head',
                 minify: true,
                 inlineSource: '.(js|css)$',
-                template: path.resolve(__dirname, './src/introduction/tpl.ejs'),
+                template: path.resolve(__dirname, './src/pages/introduction/tpl.ejs'),
                 filename: 'introduction.html',
                 chunks: [
                     'app',
                     'styles',
                     'introduction'
+                ]
+            }),
+            new HtmlWebpackPlugin({
+                inject: 'head',
+                minify: true,
+                inlineSource: '.(js|css)$',
+                template: path.resolve(__dirname, './src/pages/dashboard/tpl.ejs'),
+                filename: 'dashboard.html',
+                chunks: [
+                    'app',
+                    'styles',
+                    'dashboard'
                 ]
             })
         ]

@@ -9,12 +9,13 @@
 </head>
 
 <body>
-    <%= require('../partials/header.ejs')({
-        title: '#1. Introduction'
-    }) %>
-    <div class="ui grid container presentation-table">
+    <div class="ui grid container presentation article">
+        <%= require('../../partials/nav.ejs')() %>
+        <%= require('../../partials/header.ejs')({
+                title: '#1. Introduction'
+            }) %>
         <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column presentation-content">
-            <!-- <div class="ui grid">
+            <div class="ui grid">
                 <div class="column">
                     <div class="ui piled segment">
                         <h3 class="header">Articles</h3>
@@ -55,21 +56,15 @@
                     </div>
                 </div>
             </div>
-            <div class="ui hidden divider"></div> -->
+            <div class="ui hidden divider"></div>
             <div class="row">
                 <div class="column">
                     <div class="ui two column stackable grid table-topic">
                         <div class="column task">
-                            <h3 class="ui header">
-                                Topic
-                                <!-- <%= require('../partials/circles.ejs')() %> -->
-                                Goals
-                            </h3>
+                            <h3 class="ui header">Topic Goals</h3>
                         </div>
                         <div class="column howto">
-                            <h3 class="ui header">
-                                <!-- <%= require('../partials/circles.ejs')() %>  -->
-                                Information</h3>
+                            <h3 class="ui header">Information</h3>
                         </div>
                     </div>
                     <div class="ui divider"></div>
@@ -287,8 +282,8 @@
                         </div>
                         <div class="column howto">
                             <ul>
-                                <li>
-                                    Trying to keep his code clean
+                                <li class="drop arrow right">
+                                    <b class="collapsable">Trying to keep his code clean</b>
                                     <ul>
                                         <li>Right name for structures</li>
                                         <li>DRY - <b>Don't</b> repeat yourself</li>
@@ -405,8 +400,8 @@
                 </ul>
             </div>
         </div>
+        <%= require('../../partials/footer.ejs')() %>
     </div>
-    <%= require('../partials/footer.ejs')() %>
 </body>
 
 </html>
