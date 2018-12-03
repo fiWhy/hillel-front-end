@@ -1,14 +1,26 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const manifestOptions = require('./manifest');
 const _ = require('lodash');
 
 module.exports = (env) => {
+    const chunks = [
+        'app',
+        'styles',
+    ];
+
+    if (!env.production) {
+        chunks.push('sw-register');
+    }
+
     const config = {
         devtool: 'eval-cheap-module-source-map',
         mode: env.production ? 'production' : 'development',
         entry: {
+            'sw-register': path.resolve(__dirname, './src/sw-register.js'),
+            sw: path.resolve(__dirname, './src/sw.js'),
             app: path.resolve(__dirname, './src/index.js'),
             styles: path.resolve(__dirname, './src/styles.scss'),
             introduction: path.resolve(__dirname, './src/pages/introduction/script.js'),
@@ -16,6 +28,9 @@ module.exports = (env) => {
         },
         output: {
             path: path.resolve(__dirname, './dist')
+        },
+        devServer: {
+            publicPath: 'http://localhost:4201'
         },
         module: {
             rules: [{
@@ -53,11 +68,9 @@ module.exports = (env) => {
                 inlineSource: '.(js|css)$',
                 template: path.resolve(__dirname, './src/pages/introduction/tpl.ejs'),
                 filename: 'introduction.html',
-                chunks: [
-                    'app',
-                    'styles',
+                chunks: chunks.concat([
                     'introduction'
-                ]
+                ])
             }),
             new HtmlWebpackPlugin({
                 inject: 'head',
@@ -65,11 +78,9 @@ module.exports = (env) => {
                 inlineSource: '.(js|css)$',
                 template: path.resolve(__dirname, './src/pages/dashboard/tpl.ejs'),
                 filename: 'dashboard.html',
-                chunks: [
-                    'app',
-                    'styles',
+                chunks: chunks.concat([
                     'dashboard'
-                ]
+                ])
             })
         ]
     }
@@ -77,6 +88,14 @@ module.exports = (env) => {
     if (env.production) {
         config.devtool = 'false';
         config.plugins.push(new HtmlWebpackInlineSourcePlugin());
+        config.plugins.push(new WebpackPwaManifest(Object.assign({},
+            manifestOptions, {
+                filename: 'manifest.json',
+                inject: true,
+                publicPath: null,
+                includeDirectory: true
+            }
+        )));
     }
 
     return config;

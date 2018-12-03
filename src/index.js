@@ -4,7 +4,6 @@
  hljs.registerLanguage('javascript', javascript);
  hljs.initHighlightingOnLoad();
 
-
  const toggleSticky = (elms) => {
      elms.forEach(data => {
          if (window.pageYOffset >= data.top) {
