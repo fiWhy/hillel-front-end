@@ -1,0 +1,20 @@
+<div class="ui grid">
+    <div class="column">
+        <div class="ui piled segment">
+            <h3 class="header">Articles</h3>
+            <div class="ui list">
+                <% items.forEach(item => { %>
+                <div class="item">
+                    <div class="content">
+                        <div class="header">
+                            <a href="<%= item.url %>">
+                                <%= item.label %></a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui hidden divider"></div>
