@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const _ = require('lodash');
 
+
 module.exports = (env) => {
     const config = {
         devtool: 'eval-cheap-module-source-map',
