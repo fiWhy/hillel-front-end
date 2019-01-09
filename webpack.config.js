@@ -34,31 +34,26 @@ module.exports = (env) => {
         },
         module: {
             rules: [{
-                test: /\.s?css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-            {
-                test: /\.ejs$/,
-                use: 'ejs-loader'
-            },
-            {
-                test: /\.js$/,
-                use: 'babel-loader',
-                exclude: path.resolve(__dirname, './node_modules')
-            },
-            {
-                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]',
-                    outputPath: './assets'
+                    test: /\.s?css$/,
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        'sass-loader'
+                    ]
+                },
+                {
+                    test: /\.ejs$/,
+                    use: 'ejs-loader'
+                },
+                {
+                    test: /\.js$/,
+                    use: 'babel-loader',
+                    exclude: path.resolve(__dirname, './node_modules')
+                },
+                {
+                    test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                    loader: 'url-loader'
                 }
-
-            }
             ]
         },
         plugins: [

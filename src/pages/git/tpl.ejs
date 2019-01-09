@@ -24,7 +24,7 @@
                 ]
             }) %>
             <%= require('../../partials/table-header.ejs')() %>
-            <div class="row" id="data-types">
+            <div class="row">
                 <div class="column theme">
                     <%= require('../../partials/theme-header.ejs')({
                        title: 'Git Workflow',
@@ -39,13 +39,21 @@
                             </ul>
                         </div>
                         <div class="column howto">
-                            <img class="ui image" src="assets/snapshots.png">
+                            <img class="ui image" src="<%= require('./assets/snapshots.png') %>">
+                            <br>
+                            <img class="ui image" src="<%= require('./assets/flow.png') %>">
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { url: 'https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git', label: 'Git Basics'},
+                                ]
+                            }) %>
                         </div>
                     </section>
                 </div>
             </div>
 
-            <div class="row" id="data-types">
+            <div class="row">
                 <div class="column theme">
                     <%= require('../../partials/theme-header.ejs')({
                            title: 'Git Commiting Flow',
@@ -60,13 +68,13 @@
                             </ul>
                         </div>
                         <div class="column howto">
-                            <img class="ui image" src="assets/areas.png">
+                            <img class="ui image" src="<%= require('./assets/areas.png') %>">
                         </div>
                     </section>
                 </div>
             </div>
 
-            <div class="row" id="data-types">
+            <div class="row">
                 <div class="column theme">
                     <%= require('../../partials/theme-header.ejs')({
                                title: 'Useful starter git commands',
@@ -101,15 +109,12 @@
                 </div>
             </div>
 
-            <div class="row" id="homework">
+            <div class="row">
                 <div class="column theme">
-                    <header class="ui one column grid topic data">
-                        <div class="column">
-                            <h2 class="ui header underlined">
-                                <a class="hash" href="#homework">Homework</a>
-                            </h2>
-                        </div>
-                    </header>
+                    <%= require('../../partials/theme-header.ejs')({
+                        title: 'Homework',
+                        anchor: 'homework'
+                    }) %>
                     <section class="ui divider"></section>
                     <section class="ui one column stackable grid">
                         <div class="column table-timeline">
