@@ -23,7 +23,8 @@ module.exports = (env) => {
             styles: path.resolve(__dirname, './src/styles.scss'),
             introduction: path.resolve(__dirname, './src/pages/introduction/script.js'),
             types: path.resolve(__dirname, './src/pages/types/script.js'),
-            dashboard: path.resolve(__dirname, './src/pages/dashboard/script.js')
+            dashboard: path.resolve(__dirname, './src/pages/dashboard/script.js'),
+            git: path.resolve(__dirname, './src/pages/git/script.js')
         },
         output: {
             path: path.resolve(__dirname, './dist')
@@ -33,31 +34,31 @@ module.exports = (env) => {
         },
         module: {
             rules: [{
-                    test: /\.s?css$/,
-                    use: [
-                        'style-loader',
-                        'css-loader',
-                        'sass-loader'
-                    ]
-                },
-                {
-                    test: /\.ejs$/,
-                    use: 'ejs-loader'
-                },
-                {
-                    test: /\.js$/,
-                    use: 'babel-loader',
-                    exclude: path.resolve(__dirname, './node_modules')
-                },
-                {
-                    test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: './assets'
-                    }
-
+                test: /\.s?css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.ejs$/,
+                use: 'ejs-loader'
+            },
+            {
+                test: /\.js$/,
+                use: 'babel-loader',
+                exclude: path.resolve(__dirname, './node_modules')
+            },
+            {
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: './assets'
                 }
+
+            }
             ]
         },
         plugins: [
@@ -71,7 +72,7 @@ module.exports = (env) => {
                     'introduction'
                 ])
             }),
-             new HtmlWebpackPlugin({
+            new HtmlWebpackPlugin({
                 inject: 'head',
                 minify: true,
                 inlineSource: '.(js|css)$',
@@ -87,6 +88,16 @@ module.exports = (env) => {
                 inlineSource: '.(js|css)$',
                 template: path.resolve(__dirname, './src/pages/dashboard/tpl.ejs'),
                 filename: 'dashboard.html',
+                chunks: chunks.concat([
+                    'dashboard'
+                ])
+            }),
+            new HtmlWebpackPlugin({
+                inject: 'head',
+                minify: true,
+                inlineSource: '.(js|css)$',
+                template: path.resolve(__dirname, './src/pages/git/tpl.ejs'),
+                filename: '04.git.html',
                 chunks: chunks.concat([
                     'dashboard'
                 ])
