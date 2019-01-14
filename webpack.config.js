@@ -24,7 +24,8 @@ module.exports = (env) => {
             introduction: path.resolve(__dirname, './src/pages/introduction/script.js'),
             types: path.resolve(__dirname, './src/pages/types/script.js'),
             dashboard: path.resolve(__dirname, './src/pages/dashboard/script.js'),
-            git: path.resolve(__dirname, './src/pages/git/script.js')
+            git: path.resolve(__dirname, './src/pages/git/script.js'),
+            loops: path.resolve(__dirname, './src/pages/loops/script.js')
         },
         output: {
             path: path.resolve(__dirname, './dist')
@@ -95,6 +96,16 @@ module.exports = (env) => {
                 filename: '04.git.html',
                 chunks: chunks.concat([
                     'dashboard'
+                ])
+            }),
+            new HtmlWebpackPlugin({
+                inject: 'head',
+                minify: true,
+                inlineSource: '.(js|css)$',
+                template: path.resolve(__dirname, './src/pages/loops/tpl.ejs'),
+                filename: '05.loops.html',
+                chunks: chunks.concat([
+                    'loops'
                 ])
             })
         ]
