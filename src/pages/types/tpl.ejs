@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ui grid container presentation article">
+        <%= require('../../partials/header.ejs')({
+                title: '#2. Types'
+            }) %>
+        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column presentation-content">
+            <%= require('../../partials/articles.ejs')({
+                items: [
+                    { url: 'https://javascriptrefined.io/nan-and-typeof-36cd6e2a4e43', label: 'NaN and typeof'},
+                    { url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt', label: 'parseInt'},
+                    { url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()', label: 'increment'},
+                    { url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement_(--)', label: 'decrement'}
+                ]
+            }) %>
+            <%= require('../../partials/table-header.ejs')() %>
+            <div class="row" id="data-types">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                       title: 'Data Types',
+                       anchor: 'data-types'
+                   }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What data types exist in JavaScript?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>
+                                    *</li>
+                            </ul>
+
+                            <small>* Symbol primitive appeared in ES6</small>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row" id="type-recognition">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                            title: 'Type Recognition',
+                            anchor: 'type-recognition'
+                        }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    typeof examples
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+
+                            <div class="ui segment with-code">
+                                <div class="ui top right attached label">Code</div>
+                                <pre>
+                                <code class="javascript">typeof 2 // - number
+typeof "" // - string
+typeof true // boolean
+typeof {} // - object
+typeof [] // - object *
+typeof function () { } // - function
+typeof undefined // - undefined
+typeof null // - object *</code>
+                            </pre>
+                            </div>
+                            <br>
+                            <small>* [] (Array) is just an variant of object</small> <br>
+                            <small>* null is object. Just another JavaScript bug =)</small>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { url: 'https://javascriptrefined.io/nan-and-typeof-36cd6e2a4e43', label: 'NaN and typeof'}
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row" id="type-casting-string">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                            title: 'Type Casting. String',
+                            anchor: 'type-casting-string'
+                        }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How to cast any type to string?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="ui segment with-code">
+                                <div class="ui top right attached label">Code</div>
+                                <pre>
+                                        <code class="javascript">String(2)
+(2).toString()
+alert(2) *</code>
+                                    </pre>
+                            </div>
+                            <br>
+                            <small>* Just for education purposes</small>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row" id="type-casting-number">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                title: 'Type Casting. Number',
+                                anchor: 'type-casting-number'
+                            }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How to cast any type to number?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="ui segment with-code">
+                                <div class="ui top right attached label">Code</div>
+                                <pre>
+                                                <code class="javascript">Number('2')
++'2' // Unary plus
+'4' - 3 // Mathematics operation with string 
+parseInt('2') // carefully </code>
+                                            </pre>
+                            </div>
+                            <div class="code-section">
+                                <h3>
+                                    Be careful!
+                                </h3>
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                                <code class="javascript">Number("abc") // NaN
+Number("32") // 32
+Number("    32    ")  // 32
+Number("32 _") // NaN
+Number(undefined) // NaN
+Number(null) // 0
+Number(true) // 1 ( false - 0 )
+
+
+typeof NaN; // number
+typeof Infinity; // number
+
+typeof (1 / 0) // ?
+
+</code>
+                                            </pre>
+                                </div>
+                            </div>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt', label: 'parseInt'}
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How to detect a NaN type?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="code-section">
+                                <h3>
+                                    Be careful!
+                                </h3>
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                        <code>NaN === NaN // false
+NaN == NaN // false
+                                            
+isNaN(NaN) // true
+                                            
+isNaN("ABC") // true
+Number.isNaN("ABC") // ES6 - false</code>
+                                                </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row" id="type-casting-boolean">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                        title: 'Type Casting. Boolean',
+                                        anchor: 'type-casting-boolean'
+                                    }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How to cast any type to boolean?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="ui segment with-code">
+                                <div class="ui top right attached label">Code</div>
+                                <pre>
+                                                    <code class="javascript">Boolean('2')
+!!('2')</code>
+                                                </pre>
+                            </div>
+                            <div class="code-section">
+                                <h3>
+                                    Be careful!
+                                </h3>
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                            <code class="javascript">Boolean("false") // true
+Boolean(0) // false
+Boolean(1) // true
+Boolean(undefined) // false as NaN|null is</code>
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row" id="operations-priority">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                            title: 'Operations priority',
+                                            anchor: 'operations-priority'
+                                        }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What is priority of JavaScript operations?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <%= require('./priority-table.ejs')() %>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="operations-shorthand">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                                title: 'Operations shorthand',
+                                                anchor: 'operations-shorthand'
+                                            }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How to use math operations shorthand?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="code-section">
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                                    <code class="javascript">var num = 5;
+
+num += 2; // num = num + 2 = 7
+num *= 2; // num = num * 2 = 14
+num /= 2; // num = num / 2 = 7
+num %= 2; // num = num % 2 = 1
+num -= 2; // num = num - 2 = -1</code>
+                                                </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="increment-decrement">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                                    title: 'Increment / Decrement',
+                                                    anchor: 'increment-decrement'
+                                                }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()">increment</a>
+                                    /
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement_(--)">decrement</a>?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="code-section">
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                                        <code class="javascript">var num = 5;
+num++; // 5
+// 6
+++num; // 7
+
+num--; // 7
+// 6
+--num; // 5
+// can be only used with variables</code>
+                                                    </pre>
+                                </div>
+                            </div>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                   { url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()', label: 'increment'},
+                                   { url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement_(--)', label: 'decrement'}
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="comparison">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                                        title: 'Comparison Operators',
+                                                        anchor: 'comparison'
+                                                    }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What comparison operators exist?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="code-section">
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                                            <code class="javascript">== // equal to
+=== // strict equality
+!= // not equal to
+!== // strictly not equal
+&gt; // greater than
+&gt;= // greater than or equal to
+&lt; // less than
+&lt;= // less than or equal to</code>
+                                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="logical">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                                            title: 'Logical Operators',
+                                                            anchor: 'logical'
+                                                        }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What logical operators exist?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <div class="code-section">
+                                <div class="ui segment with-code">
+                                    <div class="ui top right attached label">Code</div>
+                                    <pre>
+                                                                <code class="javascript">&& // И
+|| // Или
+! // Не
+
+!false // true
+!true // false
+false && true // false
+false || true // true</code>
+                                                            </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row" id="homework">
+                <div class="column theme">
+                    <header class="ui one column grid topic data">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a class="hash" href="#homework">Homework</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui one column stackable grid">
+                        <div class="column table-timeline">
+                            <div class="column ui red segment">
+                                <p>
+                                    <ul> <b>Arithmetic average</b>
+                                        <li>Ask user to enter number one by one and calculate result</li>
+                                        <li>Ask user to enter numbers splitted by comma and calculate result *</li>
+                                    </ul>
+                                </p>
+                                <small>* it's ok if you can't do that yet!</small>
+                            </div>
+                            <div class="column ui red segment">
+                                <p>
+                                    Tell to user what currency is current in your system. Ask him to enter custom
+                                    number and then convert it to your currency.
+                                </p>
+                                <p>Don't forget to notify user about the result!</p>
+                            </div>
+                            <div class="column ui red segment">
+                                <p>Compare two custom user inputs</p>
+                            </div>
+                            <div class="column ui red segment">
+                                <p>Write a script that ask user to guess what number system has generated</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="two wide tablet computer only column">
+            <div class="sticked">
+                <ul>
+                    <li><a class="hash" href="#data-types">Data Types</a></li>
+                    <li><a class="hash" href="#type-recognition">Type Recognition</a></li>
+                    <li><a class="hash" href="#type-casting-string">Casting to String</a></li>
+                    <li><a class="hash" href="#type-casting-number">Casting to Number</a></li>
+                    <li><a class="hash" href="#type-casting-boolean">Casting to Boolean</a></li>
+                    <li><a href="#operations-priority" class="hash">Operations Priority</a></li>
+                    <li><a href="#operations-shorthand" class="hash">Operations shorthand</a></li>
+                    <li><a href="#increment-decrement" class="hash">Increment / Decrement</a></li>
+                    <li><a href="#comparison" class="hash">Comparison Operators</a></li>
+                    <li><a href="#logical" class="hash">Logical Operators</a></li>
+                    <li><a class="hash" href="#homework">Homework</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <%= require('../../partials/footer.ejs')() %> -->
+    </div>
+</body>
+
+</html>

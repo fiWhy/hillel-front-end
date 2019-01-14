@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ui grid container presentation article">
+        <%= require('../../partials/nav.ejs')() %>
+        <%= require('../../partials/header.ejs')({
+                title: 'Dashboard'
+            }) %>
+        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column presentation-content">
+            <div class="row" id="courses">
+                <div class="column theme">
+                    <header class="ui column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a class="hash" href="#materials">Materials</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui column">
+                        <div class="ui bulleted list">
+                            <div class="item drop arrow right">
+                                <div class="content collapsable">
+                                    <div class="header">Front-End Pro</div>
+                                    Description
+                                </div>
+                                <div class="list">
+                                    <div class="item">
+                                        <a href="http://www.cocos2d-x.org/">Cocos2D</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://threejs.org/">three.js</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://www.pixijs.com/">PixiJS</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://phaser.io/">Phaser</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+                <section class="ui divider"></section>
+                <div class="column theme">
+                    <header class="ui column grid topic">
+                        <div class="column">
+                            <h2 class="ui header underlined">
+                                <a class="hash" href="#courses">Courses</a>
+                            </h2>
+                        </div>
+                    </header>
+                    <section class="ui divider"></section>
+                    <section class="ui column">
+                        <div class="ui items">
+                            <div class="item">
+                                <a href="#" class="ui tiny image">
+                                    <img src="/src/images/jenny.jpg" alt="Coach">
+                                </a>
+                                <div class="content">
+                                    <a href="#" class="header">Front-End Pro by Buryachkovsky Denis</a>
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <a href="#" class="ui tiny image">
+                                    <img src="/src/images/jenny.jpg" alt="Coach">
+                                </a>
+                                <div class="content">
+                                    <a href="#" class="header">Java Elementary by Dmitry Baron</a>
+                                    <div class="description">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="two wide tablet computer only column">
+            <div class="sticked">
+                <ul>
+                    <li><a class="hash" href="#materials">Materials</a></li>
+                    <li><a class="hash" href="#courses">Courses</a></li>
+                </ul>
+            </div>
+        </div>
+        <%= require('../../partials/footer.ejs')() %>
+    </div>
+</body>
+
+</html>

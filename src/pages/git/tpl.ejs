@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ui grid container presentation article">
+        <%= require('../../partials/header.ejs')({
+                title: '#4. Git'
+            }) %>
+        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column presentation-content">
+            <%= require('../../partials/articles.ejs')({
+                items: [
+                    { url: 'https://git-scm.com/doc', label: 'Git Documentation'},
+                    { url: 'https://git-scm.com/docs/git-config', label: 'git-config'},
+                    { url: 'https://git-scm.com/docs/git-init', label: 'git-init'},
+                    { url: 'https://git-scm.com/docs/git-commit', label: 'git-commit'},
+                    { url: 'https://git-scm.com/docs/git-clone', label: 'git-clone'}
+                ]
+            }) %>
+            <%= require('../../partials/table-header.ejs')() %>
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                       title: 'Git Workflow',
+                       anchor: 'git-workflow'
+                   }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does git work with data?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <img class="ui image" src="<%= require('./assets/snapshots.png') %>">
+                            <br>
+                            <img class="ui image" src="<%= require('./assets/flow.png') %>">
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { url: 'https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git', label: 'Git Basics'},
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                           title: 'Git Commiting Flow',
+                           anchor: 'git-commiting-flow'
+                       }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does git commiting process work?
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <img class="ui image" src="<%= require('./assets/areas.png') %>">
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                               title: 'Useful starter git commands',
+                               anchor: 'git-useful-commands'
+                           }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>Useful Starter Git Commands</li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                git -
+                                <li>config</li>
+                                <li>init</li>
+                                <li>add [pathspec...]</li>
+                                <li>commit [-m "[message]"]</li>
+                                <li>clone [repo-url] [optional - folder name]</li>
+                            </ul>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { url: 'https://git-scm.com/docs/git-config', label: 'git-config'},
+                                    { url: 'https://git-scm.com/docs/git-init', label: 'git-init'},
+                                    { url: 'https://git-scm.com/docs/git-commit', label: 'git-commit'},
+                                    { url: 'https://git-scm.com/docs/git-clone', label: 'git-clone'}
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                        title: 'Homework',
+                        anchor: 'homework'
+                    }) %>
+                    <section class="ui divider"></section>
+                    <section class="ui one column stackable grid">
+                        <div class="column table-timeline">
+                            <div class="column ui red segment">
+                                <p>Move all previous homework to any git service you want to use in nearest future.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="two wide tablet computer only column">
+            <div class="sticked">
+                <ul>
+                    <li><a class="hash" href="#git-workflow">Git Workflow</a></li>
+                    <li><a class="hash" href="#git-commit-flow">Git Commit Flow</a></li>
+                    <li><a class="hash" href="#git-useful-commands">Useful Starter Git Commands</a></li>
+                    <li><a class="hash" href="#homework">Homework</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <%= require('../../partials/footer.ejs')() %> -->
+    </div>
+</body>
+
+</html>
