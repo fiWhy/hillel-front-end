@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ui grid container presentation article">
+        <%= require('../../partials/header.ejs')({
+                title: '#5. Loops'
+            }) %>
+        <div class="thirteen wide tablet thirteen wide computer sixteen wide mobile column presentation-content">
+            <%= require('../../partials/articles.ejs')({
+                items: [
+                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while', label: 'do...while' },
+                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while', label: 'while' },
+                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for', label: 'for' },
+                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break', label: 'break' },
+                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue', label: 'continue' }
+                ]
+            }) %>
+            <%= require('../../partials/table-header.ejs')() %>
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                       title: 'Definitions',
+                       anchor: 'definitions'
+                   }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    What is loop
+                                </li>
+                                <li>What is iteration</li>
+                                <li>What is infinite loop</li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <ul>
+                                <li>In computer programming, a loop is a sequence of instruction s that is continually
+                                    repeated until a certain condition is reached. <small><a href="https://whatis.techtarget.com/definition/loop">whatis</a></small></li>
+                                <li>Iteration is the repetition of a process in a computer program, usually done with
+                                    the help of loops. <small><a href="https://www.techopedia.com/definition/3821/iteration">technopedia</a></small></li>
+                                <li>An infinite loop is one that lacks a functioning exit routine . The result is that
+                                    the loop repeats continually until the operating system senses it and terminates
+                                    the program with an error or until some other event occurs (such as having the
+                                    program automatically terminate after a certain duration of time). <small><a href="https://whatis.techtarget.com/definition/loop">whatis</a></small></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                           title: 'do/while (post-condition)',
+                           anchor: 'do-while-postcondition'
+                       }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does postcondition do/while look like
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <script src="https://gist.github.com/fiWhy/23d5bc2b64ccd03391db0a66c66796fb.js"></script>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while', label: 'do...while' }
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does postcondition works
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            do block -> (!) condition checking -> do block -> (!)
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                               title: 'while (pre-condition)',
+                               anchor: 'while-precondition'
+                           }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does precondition while look like
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <script src="https://gist.github.com/fiWhy/7c0f5efc0a391a41e80e9364c364f2b5.js"></script>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while', label: 'while' }
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does postcondition works
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            (!) condition checking -> do block -> (!)
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                   title: 'for',
+                                   anchor: 'for'
+                               }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does for loop look like
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <script src="https://gist.github.com/fiWhy/8a9274db3bee19da3e15d03a6e9cc155.js"></script>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for', label: 'for' }
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does for loop works
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            start (initialization) -> (!) condition -> iteration code block -> step -> (!)
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                                       title: 'break/continue',
+                                       anchor: 'break-continue'
+                                   }) %>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does break work
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <p>'<b>break</b>' directive stops loop immediately</p>
+                            <script src="https://gist.github.com/fiWhy/97f6a041bfb304fc459d8f503c8f0002.js"></script>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                                items: [
+                                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break', label: 'break' }
+                                ]
+                            }) %>
+                        </div>
+                    </section>
+                    <section class="ui two column stackable grid data">
+                        <div class="column task">
+                            <ul>
+                                <li>
+                                    How does continue work
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column howto">
+                            <p>'<b>continue</b>' directive moves loop to next iteration</p>
+                            <script src="https://gist.github.com/fiWhy/feeb7abdcaab28b4374f946f8b84ad2a.js"></script>
+                            <br><br>
+                            <%= require('../../partials/articles.ejs')({
+                items: [
+                    { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue', label: 'continue' }
+                ]
+            }) %>
+                        </div>
+                        
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="column theme">
+                    <%= require('../../partials/theme-header.ejs')({
+                        title: 'Homework',
+                        anchor: 'homework'
+                    }) %>
+                    <section class="ui divider"></section>
+                    <section class="ui one column stackable grid">
+                        <div class="column table-timeline">
+                            <div class="column ui red segment">
+                                <p>Rewrite examples with number iteration and loop interruption with while and do/while
+                                    loops</p>
+                            </div>
+                            <div class="column ui red segment">
+                                <p>(By your own) Write a script with requesting a guess of randomly generated number
+                                    with an option to interrupt the game.</p>
+                            </div>
+                            <div class="column ui red segment">
+                                <p>Ask user to enter number that should be multiple to every generated number. Output
+                                    it in console.</p>
+                                <p>(Harded mode) Ask count of numbers should be shown</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="two wide tablet computer only column">
+            <div class="sticked">
+                <ul>
+                    <li><a class="hash" href="#definitions">Definitions</a></li>
+                    <li><a class="hash" href="#do-while-postcondition">do/while (post-condition)</a></li>
+                    <li><a class="hash" href="#while-precondition">while (pre-condition)</a></li>
+                    <li><a class="hash" href="#for">for</a></li>
+                    <li><a class="hash" href="#break-continue">break/continue</a></li>
+                    <li><a class="hash" href="#homework">Homework</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <%= require('../../partials/footer.ejs')() %> -->
+    </div>
+</body>
+
+</html>
